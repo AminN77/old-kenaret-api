@@ -174,7 +174,6 @@ namespace Infrastructure.Migrations
                         .HasColumnType("uuid");
 
                     b.Property<string>("Avatar")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<DateTime>("CreateDateTime")
@@ -221,7 +220,7 @@ namespace Infrastructure.Migrations
                         {
                             Id = new Guid("4f590a70-94ce-4d15-9494-5248280c2ce3"),
                             Avatar = "im am here",
-                            CreateDateTime = new DateTime(2022, 9, 5, 9, 0, 11, 96, DateTimeKind.Utc).AddTicks(1050),
+                            CreateDateTime = new DateTime(2022, 9, 5, 10, 18, 10, 581, DateTimeKind.Utc).AddTicks(6670),
                             FirstName = "mediasoup",
                             IsAdmin = true,
                             IsRegisterCompleted = true,

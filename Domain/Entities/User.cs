@@ -16,7 +16,7 @@ namespace Domain.Entities
         public string LastName { get; set; }
         [Required]
         public string PhoneNumber { get; set; }
-        public string Avatar { get; set; }
+        public string? Avatar { get; set; }
         public bool IsAdmin { get; set; }
         [Required]
         public DateTime CreateDateTime { get; set; }
@@ -28,7 +28,7 @@ namespace Domain.Entities
         public virtual ICollection<LiveStream> LiveStreams { get; set; }
         public User()
         {
-            
+
         }
     }
 }

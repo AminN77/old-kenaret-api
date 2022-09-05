@@ -88,7 +88,7 @@ namespace Infrastructure.Migrations
                     FirstName = table.Column<string>(type: "text", nullable: false),
                     LastName = table.Column<string>(type: "text", nullable: false),
                     PhoneNumber = table.Column<string>(type: "text", nullable: false),
-                    Avatar = table.Column<string>(type: "text", nullable: false),
+                    Avatar = table.Column<string>(type: "text", nullable: true),
                     IsAdmin = table.Column<bool>(type: "boolean", nullable: false),
                     CreateDateTime = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     LastLoginDateTime = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
@@ -148,7 +148,7 @@ namespace Infrastructure.Migrations
             migrationBuilder.InsertData(
                 table: "Users",
                 columns: new[] { "Id", "Avatar", "CreateDateTime", "FirstName", "IsAdmin", "IsRegisterCompleted", "LastLoginDateTime", "LastName", "PhoneNumber", "RefreshToken", "RefreshTokenExpireTime", "Username" },
-                values: new object[] { new Guid("4f590a70-94ce-4d15-9494-5248280c2ce3"), "im am here", new DateTime(2022, 9, 5, 9, 0, 11, 96, DateTimeKind.Utc).AddTicks(1050), "mediasoup", true, true, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "server", "09009009000", "qkjbcoi238yehasd", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Admin_mediasoup_server" });
+                values: new object[] { new Guid("4f590a70-94ce-4d15-9494-5248280c2ce3"), "im am here", new DateTime(2022, 9, 5, 10, 18, 10, 581, DateTimeKind.Utc).AddTicks(6670), "mediasoup", true, true, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "server", "09009009000", "qkjbcoi238yehasd", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Admin_mediasoup_server" });
 
             migrationBuilder.InsertData(
                 table: "World",
