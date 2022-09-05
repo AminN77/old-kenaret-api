@@ -10,9 +10,9 @@ namespace Domain.Entities
         [Key]
         public Guid Id { get; set; }
         [Required]
-        public string Title { get; set; }
+        public string? Title { get; set; }
         [Required]
-        public string MainQuestion { get; set; }
+        public string? MainQuestion { get; set; }
         [ForeignKey("Streamer")]
         public Guid StreamerId { get; set; }
         [ForeignKey("World")]
@@ -25,7 +25,7 @@ namespace Domain.Entities
         public virtual World World { get; set; }
         public LiveStream()
         {
-            
+
         }
     }
 }

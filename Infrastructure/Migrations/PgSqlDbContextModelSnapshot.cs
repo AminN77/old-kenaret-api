@@ -32,11 +32,9 @@ namespace Infrastructure.Migrations
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("Email")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("Id");
@@ -133,7 +131,6 @@ namespace Infrastructure.Migrations
                         .HasColumnType("boolean");
 
                     b.Property<string>("Value")
-                        .IsRequired()
                         .HasMaxLength(6)
                         .HasColumnType("character varying(6)");
 
@@ -201,7 +198,6 @@ namespace Infrastructure.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("RefreshToken")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<DateTime>("RefreshTokenExpireTime")
@@ -220,7 +216,7 @@ namespace Infrastructure.Migrations
                         {
                             Id = new Guid("4f590a70-94ce-4d15-9494-5248280c2ce3"),
                             Avatar = "im am here",
-                            CreateDateTime = new DateTime(2022, 9, 5, 10, 18, 10, 581, DateTimeKind.Utc).AddTicks(6670),
+                            CreateDateTime = new DateTime(2022, 9, 5, 10, 23, 49, 883, DateTimeKind.Utc).AddTicks(7740),
                             FirstName = "mediasoup",
                             IsAdmin = true,
                             IsRegisterCompleted = true,

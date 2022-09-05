@@ -7,11 +7,11 @@ namespace Domain.Entities
     {
         [Key]
         public Guid Id { get; set; }
-        
+
         [MaxLength(6)]
         [MinLength(5)]
-        public string Value { get; set; }
-        
+        public string? Value { get; set; }
+
         public DateTime CreateDate { get; set; }
 
         public DateTime ExpirationDate { get; set; }
@@ -22,7 +22,7 @@ namespace Domain.Entities
 
         public OtpCode()
         {
-            
+
         }
     }
 }

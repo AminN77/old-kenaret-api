@@ -9,9 +9,9 @@ namespace Domain.Entities
         [Key]
         public Guid Id { get; set; }
         [Required]
-        public string Title { get; set; }
+        public string? Title { get; set; }
         public DateTime CreateDateTime { get; set; }
         public virtual ICollection<LiveStream> LiveStreams { get; set; }
-        public World(){}
+        public World() { }
     }
 }

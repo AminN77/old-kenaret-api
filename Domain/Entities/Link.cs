@@ -9,13 +9,13 @@ namespace Domain.Entities
         [Key]
         public Guid Id { get; set; }
         [Required]
-        public string Description { get; set; }
+        public string? Description { get; set; }
         [Required]
-        public string Url { get; set; }
-        
+        public string? Url { get; set; }
+
         public Link()
         {
-            
+
         }
     }
 }
