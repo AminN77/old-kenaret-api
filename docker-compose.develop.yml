@@ -1,0 +1,29 @@
+# Please refer https://aka.ms/HTTPSinContainer on how to setup an https developer certificate for your ASP .NET Core service.
+
+version: "3.8"
+
+services:
+  pgsql:
+    image: postgres:latest
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgrespassword
+    ports:
+      - 5432:5432
+
+  lsec-backend-service:
+    build: .
+    image: lsec-backend-service-dev:1.0.0
+    container_name: LSEC-backend-dev
+    ports:
+      - 8080:8080
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      PGSQL_HOST: pgsql
+      PGSQL_PORT: 5432
+      PGSQL_USERNAME: postgres
+      PGSQL_PASSWORD: postgrespassword
+    restart: unless-stopped
+    depends_on:
+      - pgsql
